@@ -1,0 +1,120 @@
+# curl -v -X POST http://localhost:8080/clear
+POST http://localhost:8080/clear
+
+###
+
+# curl -v http://localhost:8080/state
+GET http://localhost:8080/state
+
+###
+
+# curl -v -X POST http://localhost:8080/shot -H 'content-type: application/json'   -d '{ "coord": "1A" }'
+POST http://localhost:8080/shot
+Content-Type: application/json
+
+{
+  "coord": "4C"
+}
+
+###
+
+# curl -v -X POST http://localhost:8080/shot -H 'content-type: application/json'   -d '{ "coord": "1A" }'
+POST http://localhost:8080/shot
+Content-Type: application/json
+
+{
+  "coord": "3E"
+}
+
+###
+
+# curl -v -X POST http://localhost:8080/shot -H 'content-type: application/json'   -d '{ "coord": "2B" }'
+POST http://localhost:8080/shot
+Content-Type: application/json
+
+{
+  "coord": "3D"
+}
+
+###
+
+# curl -v -X POST http://localhost:8080/shot -H 'content-type: application/json'   -d '{ "coord": "2B" }'
+POST http://localhost:8080/shot
+Content-Type: application/json
+
+{
+  "coord": "2B"
+}
+
+###
+
+# curl -v -X POST http://localhost:8080/shot -H 'content-type: application/json'   -d '{ "coord": "1A" }'
+POST http://localhost:8080/shot
+Content-Type: application/json
+
+{
+  "coord": "2A"
+}
+
+###
+
+# curl -v -X POST http://localhost:8080/shot -H 'content-type: application/json'   -d '{ "coord": "1A" }'
+POST http://localhost:8080/shot
+Content-Type: application/json
+
+{
+  "coord": "1B"
+}
+
+###
+
+# curl -v -X POST http://localhost:8080/shot -H 'content-type: application/json'   -d '{ "coord": "1A" }'
+POST http://localhost:8080/shot
+Content-Type: application/json
+
+{
+  "coord": "1A"
+}
+
+###
+
+# curl -v -X POST http://localhost:8080/ship -H 'content-type: application/json'   -d '{ "Coordinates": "1A 2B,3D 3E" }'
+POST http://localhost:8080/ship
+Content-Type: application/json
+
+{
+  "Coordinates": "1A 2B"
+}
+
+###
+
+# curl -v -X POST http://localhost:8080/ship -H 'content-type: application/json'   -d '{ "Coordinates": "1A 2B,3D 3E" }'
+POST http://localhost:8080/ship
+Content-Type: application/json
+
+{
+  "Coordinates": "1A 2B,3D 10E"
+}
+
+###
+
+# curl -v -X POST http://localhost:8080/ship -H 'content-type: application/json'   -d '{ "Coordinates": "1A 2B,3D 3E" }'
+POST http://localhost:8080/ship
+Content-Type: application/json
+
+{
+  "Coordinates": "1A 2B,3D 3E"
+}
+
+###
+
+# curl -v -X POST http://localhost:8080/create-matrix -H 'content-type: application/json'   -d '{ "range": 5 }'
+POST http://localhost:8080/create-matrix
+Content-Type: application/json
+
+{
+  "range": 5
+}
+
+###
+
