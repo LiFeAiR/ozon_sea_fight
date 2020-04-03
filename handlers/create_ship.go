@@ -24,6 +24,7 @@ func CreateShips(app system.App) gin.HandlerFunc {
 		err := app.CreateShips(json.Coordinates)
 		if err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+			return
 		}
 
 		c.Status(200)
