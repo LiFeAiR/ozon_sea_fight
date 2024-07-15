@@ -1,9 +1,9 @@
 package handlers
 
 import (
+	"github.com/LiFeAiR/ozon_sea_fight/system"
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"sea_fight/system"
 )
 
 type postShot struct {

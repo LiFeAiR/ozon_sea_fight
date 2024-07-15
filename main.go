@@ -1,9 +1,9 @@
 package main
 
 import (
+	"github.com/LiFeAiR/ozon_sea_fight/handlers"
+	"github.com/LiFeAiR/ozon_sea_fight/system"
 	"github.com/gin-gonic/gin"
-	"sea_fight/handlers"
-	"sea_fight/system"
 )
 
 func main() {

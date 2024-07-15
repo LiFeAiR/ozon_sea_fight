@@ -2,7 +2,7 @@ package system
 
 import (
 	"fmt"
-	"sea_fight/dto"
+	"github.com/LiFeAiR/ozon_sea_fight/dto"
 	"strconv"
 	"strings"
 )
@@ -14,6 +14,7 @@ type App interface {
 	MakeShot(coordinates string) (*dto.Shot, error)
 	State() dto.State
 	ShipsCreated() bool
+	GetFightMatrix() map[string]map[string]bool
 }
 
 type Application struct {
@@ -49,7 +50,7 @@ func (app *Application) CreateMatrix(maxIndex int) {
 		app.ShipMatrix[s] = make(map[string]int)
 
 		for j := 0; j < maxIndex; j++ {
-			s1 := string(j + 65)
+			s1 := fmt.Sprint(j + 65)
 			app.FightMatrix[s][s1] = false
 			app.ShipMatrix[s][s1] = -1
 		}
@@ -133,7 +134,7 @@ func (app *Application) putShipToMatrix(ship *dto.Ship, idx int) (int, error) {
 		s := strconv.Itoa(i)
 
 		for j := jMin; j <= jMax; j++ {
-			s1 := string(j + 65)
+			s1 := fmt.Sprint(j + 65)
 			app.ShipMatrix[s][s1] = idx
 			knock++
 		}
@@ -201,6 +202,10 @@ func (app *Application) MakeShot(coordinates string) (*dto.Shot, error) {
 
 func (app *Application) State() dto.State {
 	return app.state
+}
+
+func (app *Application) GetFightMatrix() map[string]map[string]bool {
+	return app.FightMatrix
 }
 
 func (app *Application) ShipsCreated() bool {

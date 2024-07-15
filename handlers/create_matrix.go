@@ -1,9 +1,9 @@
 package handlers
 
 import (
+	"github.com/LiFeAiR/ozon_sea_fight/system"
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"sea_fight/system"
 )
 
 type postMatrix struct {
@@ -21,7 +21,7 @@ func CreateMatrix(app system.App) gin.HandlerFunc {
 		app.CreateMatrix(json.Range)
 		c.Status(200)
 		//c.JSON(200, gin.H{
-		//	"matrix": app.FightMatrix,
+		//	"matrix": app.GetFightMatrix(),
 		//})
 	}
 }
